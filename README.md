@@ -6,7 +6,7 @@ Aplikacja stworzona jako projekt rekrutacyjny — służy do szybkiego generowan
 ## Funkcje
 - Interfejs Streamlit do wpisania nazwy i atrybutów
 - Generowanie kodu lokalnie lub przez AI
-- Fallback, jeśli AI nie odpowiada
+- (planowany)Fallback, jeśli AI nie odpowiada
 - Obsługa CLI z argparse
 - Parsowanie konfiguracji z YAML (opcjonalnie)
 ## 🔑 Konfiguracja API
@@ -23,7 +23,7 @@ Aby aplikacja działała z AI, potrzebujesz własnego klucza API z [OpenRouter](
 2. Kliknięcie „Generuj z AI”
 3. Prompt trafia do OpenRouter (Gemini)
 4. AI zwraca kod klasy
-5. Kod wyświetlany w UI (lub fallback lokalny w przyszłości)
+5. Kod wyświetlany w UI (lub fallback lokalny(planowany))
 
 
 ## 🚀 Następne kroki
