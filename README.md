@@ -33,6 +33,7 @@ Aby aplikacja działała z AI, potrzebujesz własnego klucza API z [OpenRouter](
 - Generowanie testów jednostkowych na podstawie klasy
 - Tryb demo bez potrzeby podawania klucza
 - Landing page z CTA i linkiem do aplikacji
+- - Dodanie fallbacku lokalnego — generowanie klasy bez AI na podstawie danych wejściowych
 
 ## ⚙️ Technologie i uzasadnienie
 
