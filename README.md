@@ -1,5 +1,5 @@
 # Generator Prototypów z AI
-
+Zobacz landing page - (https://possible-guests-785259.framer.app/)
 Aplikacja stworzona jako projekt rekrutacyjny — służy do szybkiego generowania klas Python na podstawie danych wejściowych. Dzięki wsparciu AI (Gemini via OpenRouter), użytkownik może wygenerować kod bez pisania boilerplate. Idealne narzędzie dla junior developerów, PM-ów i startupowców.
 
 
