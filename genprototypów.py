@@ -1,14 +1,7 @@
-import argparse
+
 import streamlit as st
 import yaml
 from ai import podpowiedz_snippet
-
-# === CLI ===
-parser = argparse.ArgumentParser(description='Generator prototypów')
-parser.add_argument('--nazwa', required=True)
-parser.add_argument('--komponenty', nargs='+')
-args = parser.parse_args()
-
 # === Generator klasy ===
 def generuj_klase(nazwa, atrybuty):
     linie = [f"class {nazwa}:"]
@@ -40,7 +33,3 @@ if st.button("Generuj z AI"):
 def wczytaj_konfiguracje(plik):
     with open(plik) as f:
         return yaml.safe_load(f)
-
-# === Punkt wejścia ===
-if __name__ == "__main__":
-    print(generuj_klase(args.nazwa, args.komponenty))
