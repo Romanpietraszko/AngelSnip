@@ -17,6 +17,15 @@ Aby aplikacja działała z AI, potrzebujesz własnego klucza API z [OpenRouter](
 2. Utwórz plik `.env` na podstawie `.env.example`
 3. Wklej swój klucz:
 👉 Demo online: [Kliknij tutaj, aby uruchomić aplikację](https://generatorprotypuw-awqezszjrxhyspezyqde4y.streamlit.app/)
+## 🔄 Ścieżka użytkownika
+
+1. Użytkownik wpisuje nazwę aplikacji i atrybuty
+2. Kliknięcie „Generuj z AI”
+3. Prompt trafia do OpenRouter (Gemini)
+4. AI zwraca kod klasy
+5. Kod wyświetlany w UI (lub fallback lokalny)
+
+
 ## 🚀 Następne kroki
 
 - Dodanie opcji zapisu wygenerowanego kodu do pliku `.py`
