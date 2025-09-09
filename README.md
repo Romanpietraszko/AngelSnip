@@ -24,7 +24,15 @@ Aby aplikacja działała z AI, potrzebujesz własnego klucza API z [OpenRouter](
 - **OpenRouter (Gemini)** — dostęp do modeli AI bez konieczności własnego hostingu
 - **Dotenv** — bezpieczne zarządzanie kluczem API
 - **YAML** — opcjonalna konfiguracja bez potrzeby edytowania kodu
+## 🖼️ Interfejs użytkownika
 
+Aplikacja zawiera prosty formularz:
+- Pole „Nazwa aplikacji”
+- Pole „Atrybuty (oddzielone przecinkami)”
+- Przycisk „Generuj z AI”
+
+Po kliknięciu, kod klasy zostaje wygenerowany i wyświetlony w oknie.
+![Zrzut ekranu aplikacji](apkascreen.png)
 
 ## Uruchomienie
 ```bash
