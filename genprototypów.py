@@ -24,7 +24,7 @@ if st.button("Generuj z AI"):
             st.subheader("Kod wygenerowany przez AI:")
             st.code(kod, language="python")
         except Exception as e:
-            st.error("Nie udało się połączyć z AI. Pokazuję lokalny snippet.")
+            st.error("Nie udało się połączyć z AI. Pokazuję lokalny snippet")
             st.code(generuj_klase(nazwa_ui, komponenty_ui.split(",")), language="python")
     else:
         st.warning("Podaj nazwę aplikacji i atrybuty.")
