@@ -1,7 +1,7 @@
-
 # Generator Prototypów z AI
 
-Projekt rekrutacyjny — aplikacja do generowania klas Python na podstawie danych wejściowych, z opcjonalnym wsparciem AI (Gemini via OpenRouter).
+Aplikacja stworzona jako projekt rekrutacyjny — służy do szybkiego generowania klas Python na podstawie danych wejściowych. Dzięki wsparciu AI (Gemini via OpenRouter), użytkownik może wygenerować kod bez pisania boilerplate. Idealne narzędzie dla junior developerów, PM-ów i startupowców.
+
 
 ## Funkcje
 - Interfejs Streamlit do wpisania nazwy i atrybutów
@@ -9,6 +9,22 @@ Projekt rekrutacyjny — aplikacja do generowania klas Python na podstawie danyc
 - Fallback, jeśli AI nie odpowiada
 - Obsługa CLI z argparse
 - Parsowanie konfiguracji z YAML (opcjonalnie)
+## 🔑 Konfiguracja API
+
+Aby aplikacja działała z AI, potrzebujesz własnego klucza API z [OpenRouter](https://openrouter.ai).
+
+1. Zarejestruj się i wygeneruj klucz
+2. Utwórz plik `.env` na podstawie `.env.example`
+3. Wklej swój klucz:
+👉 Demo online: [Kliknij tutaj, aby uruchomić aplikację](https://generatorprotypuw-awqezszjrxhyspezyqde4y.streamlit.app/)
+
+## ⚙️ Technologie i uzasadnienie
+
+- **Python + Streamlit** — szybkie prototypowanie z prostym UI
+- **OpenRouter (Gemini)** — dostęp do modeli AI bez konieczności własnego hostingu
+- **Dotenv** — bezpieczne zarządzanie kluczem API
+- **YAML** — opcjonalna konfiguracja bez potrzeby edytowania kodu
+
 
 ## Uruchomienie
 ```bash
