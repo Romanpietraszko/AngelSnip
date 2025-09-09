@@ -17,6 +17,13 @@ Aby aplikacja działała z AI, potrzebujesz własnego klucza API z [OpenRouter](
 2. Utwórz plik `.env` na podstawie `.env.example`
 3. Wklej swój klucz:
 👉 Demo online: [Kliknij tutaj, aby uruchomić aplikację](https://generatorprotypuw-awqezszjrxhyspezyqde4y.streamlit.app/)
+## 🚀 Następne kroki
+
+- Dodanie opcji zapisu wygenerowanego kodu do pliku `.py`
+- Integracja z GitHub (np. push wygenerowanego kodu)
+- Generowanie testów jednostkowych na podstawie klasy
+- Tryb demo bez potrzeby podawania klucza
+- Landing page z CTA i linkiem do aplikacji
 
 ## ⚙️ Technologie i uzasadnienie
 
