@@ -23,7 +23,7 @@ Aby aplikacja działała z AI, potrzebujesz własnego klucza API z [OpenRouter](
 2. Kliknięcie „Generuj z AI”
 3. Prompt trafia do OpenRouter (Gemini)
 4. AI zwraca kod klasy
-5. Kod wyświetlany w UI (lub fallback lokalny)
+5. Kod wyświetlany w UI (lub fallback lokalny w przyszłości)
 
 
 ## 🚀 Następne kroki
@@ -49,6 +49,21 @@ Aplikacja zawiera prosty formularz:
 
 Po kliknięciu, kod klasy zostaje wygenerowany i wyświetlony w oknie.
 ![Zrzut ekranu aplikacji](apkascreen.png)
+## 📊 Walidacja i potencjał
+
+Projekt może być szczególnie przydatny dla osób uczących się programowania lub budujących szybkie prototypy.  
+Potencjalne sposoby walidacji:
+
+- Przeprowadzenie testów z junior developerami — porównanie czasu pisania klasy ręcznie vs. z AI
+- Udostępnienie demo na grupach programistycznych i zebranie feedbacku
+- Analiza użycia w kontekście MVP dla startupów
+
+W przyszłości aplikacja może zostać rozszerzona o:
+- Generowanie testów jednostkowych
+- Obsługę innych języków programowania
+- Integrację z repozytorium GitHub
+- połączenie z lokalnymi snippetami
+
 
 ## Uruchomienie
 ```bash
