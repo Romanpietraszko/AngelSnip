@@ -1,16 +1,7 @@
-
 import streamlit as st
 import yaml
 import json
 import os
-
-# === CLI ===
-parser = argparse.ArgumentParser(description='Generator prototypów')
-parser.add_argument('--nazwa', required=False)
-parser.add_argument('--komponenty', nargs='+', default=[])
-parser.add_argument('--prefix', required=False)
-parser.add_argument('--folder_snippetow', required=False, default="snipety")
-args = parser.parse_args()
 
 # === Generator klasy ===
 def generuj_klase(nazwa, atrybuty):
@@ -54,13 +45,4 @@ def wczytaj_konfiguracje(plik):
     with open(plik, encoding="utf-8") as f:
         return yaml.safe_load(f)
 
-# === CLI fallback ===
-if __name__ == "__main__":
-    if args.prefix:
-        snippet = znajdz_snippet_w_folderze(args.folder_snippetow, args.prefix)
-        if snippet:
-            print("\n".join(snippet["body"]))
-        else:
-            print("Nie znaleziono snippetu.")
-    elif args.nazwa:
-        print(generuj_klase(args.nazwa, args.komponenty))
+
