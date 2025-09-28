@@ -1,0 +1,1153 @@
+//args argumenty	
+//Najważniejsze składniki snipetu-> body ciało czyli co robi, desription opis, prefix nazwa
+//${1:nazwa}Placeholder z domyślną wartością – możesz ją zmienić, ale daje Ci punkt startowy
+//$1, $2, $3 Tab stop – miejsce, do którego przeskakuje kursor po wstawieniu snippetu
+//$0	Ostateczna pozycja kursora – gdzie trafisz na końcu edycji snippetu
+{
+	 "Pętla/For": {                                                   
+		"prefix": "pętlafor",
+	 	"body": [
+	 		"for ${1:i}  in range(${2:5}):",
+	 		"    ${0:# TODO: coś zrób}"
+	 	],
+	 	"description": "składnia pętli for wstawia z opisem"
+	 },
+	 
+	"funkcja":{
+		"prefix": "funkcja",
+		"body": [
+			"def ${1:nazwa_funkcji}(${2:arg1},${3:arg2})",
+			"   ${0:# Todo: return}"
+		],
+		"description": "Wzór funkcji"	
+	 },
+	 "Klasa":{
+		"prefix": "Class",
+		"body": ["class${1:NazwaKlasy}:",
+		"def __init__(self,${2:argument1},${3:argument2}):",
+			"self.${2:argument1} = ${2:argument1}",
+			 "self.${3:argument2} = ${3:argument2}",
+		 "def ${4:metoda}(self):",
+		 	"${0:#ciało metody}",
+			 "return coś"
+
+	 ],
+	 "description": "Składnia klasy"       
+	 },
+	 "Pętla/while":{
+		"prefix": "while",
+		"body":[ "while True",
+				 "    ${0:# Todo: zrob coś}"
+	],
+	"description":"Składnia pętli while nie skończonej"
+	 },
+	 "Pętla/while/Z/warunkiem":{
+		"prefix": "while not",
+		"body":[ "while not ${1:jakiś_warunek():}",
+				 "   ${0:# Todo np: jakiś_warunek = cokolwiek()}"
+	],
+	"description":"Składnia pętli while not z warunkiem"
+	 },
+	  "Pętla/while/Z/Licznikiem":{
+		"prefix": "while licznik",
+		"body":[ "${1:i} = ${2:0}",
+    		"while ${1:i} < ${3:5}:",
+    		"    ${4:print(${1:i})}",
+    		"    ${1:i} += 1",
+    		"${0}"
+	],
+	"description":"Składnia pętli while z licznikiem"
+	 },
+	 "Pętla/while/z/Przerwaniem":{
+		"prefix": "while break",
+		"body":[   "while True:",
+   				   "    ${1:warunek} = ${2:input(\"Podaj coś: \")}",
+   				   "    if ${1:warunek} == ${3:\"exit\"}:",
+   					 "        break",
+   				   "    ${0:# TODO: zrób coś z warunkiem}"
+  ],
+	 "description": "Pętla while z przerwaniem"
+	 },
+	 "ifpodstawowy": {
+	 "prefix": "if",
+  	 "body": [
+		"if ${1:warunek}:",
+		"   ${0:#Todo kod do wykonania}"
+  ],
+  "description": "Podstawowy if"
+},
+	"ifzelse": {
+	  "prefix": "ifelse",
+	  "body": [
+		"if ${1:warunek}:",
+		"   ${2:#Todo kod jeśli warunek prawdziwy}",
+		"else:",
+		"   ${0:#Todo kod jeśli warunek jest fałszywy}"
+	  ],
+	  "description": "Opis"
+	},
+	"if/else/elif": {
+	  "prefix": "ifelseelif",
+	  "body": [
+		"if ${1:warunek}:",
+		"${2:#kod jeśli warunek}",
+		"elif${3:#warunek 2}:",
+		"${4:#kod jeśli warunek2}",
+		"else:",
+		"#kod jeśli żaden nie spełniony"
+	  ],
+	  "description": "if z elif i z else"
+	},
+	"if/zagnieżdrzony": {
+	  "prefix": "ifzif",
+	  "body": [
+		"if ${1:warunek}:",
+		"   if ${2:warunek}:",
+		"    ${0:#Kod jeśli oba warunki}"
+	  ],
+	  "description": "Zagnieżdrzony if"
+	},
+	"jedno/linikowy/warunek": {
+	  "prefix": "krótkiif",
+	  "body": [
+		"${1:warunek} if warunek else ${0:przeciwny warunek}",
+		
+	  ],
+	  "description": "jedno linijkowy if z else"
+	},
+	"Łączeniewarunków": {
+	  "prefix": "ŁączenieWarunków",
+	  "body": [
+		"if ${1:warunek logiczny} and ${2:warunek logiczny inny}",
+		"if ${2:warunek logiczny 2} or ${3:warunek inny kolejny}",
+		"if not ${0: np is_ready}"
+	  ],
+	  "description": "łączenie warunków "
+	},
+	"Porównanialogiczne": {
+  	"prefix": "porwónajlogicznie",
+  	"body": [
+	"if a == b",
+	"if a != b",
+	"if a > b",
+	"if a < b ",
+	"if a >= b",
+	"if a <= b ",
+  	],
+  	"description": "Porównania logiczne xd"
+	//obsługa błędów i walidacji xdd
+	},
+	"try/except/Klasyczna/Obsługa/Błędów": {
+  	"prefix": "try/except",
+  	"body": [
+	 "try:",
+	"   ${1:#kod}",
+	"except Expection as e:",
+	"    ${0:#kod obsługa błędu}"
+  ],
+  "description": "Klasyczna obsługa błędów"
+},
+  "try/except/finally/ObsługaBłędów/Z/Blokiem/który/zawsze/sie/Wykona": {
+	  "prefix": "try/except/finally",
+	  "body": [
+		"try:",
+		"   ${1:#kod}",
+		"except:",
+		"   ${2:# kod obsługa błędu}",
+		"finally:",
+		"   ${0:#Kod który zawsze się wykona}",
+	  ],
+	  "description": "Obsługa błędów z blokiem finaly który zawsze się wykona"
+	},
+	"raise/Reczne/Rzucenie/Wyjątku": {
+	  "prefix": "raise",
+	  "body": [
+		"raise Exception(${0:#treść komunikat błędu})",
+		
+	  ],
+	  "description": "Reczne rzucenie wyjątku"
+	},
+	"assert/szybka/Walidacja/Warunku": {
+	  "prefix": "assert",
+	  "body": [
+		"assert, ${1:#warunek()}",
+	  ],
+	  "description": "Szybka walidacja warunku"
+	},
+	"except/z/wieloma/typami/błędu": {
+	  "prefix": "exceptzwielomatypamibłędu",
+	  "body": [
+		"try:",
+		"   ${1:#Todo kod}",
+		"except(TypeError,ValueError)as e:",
+		"   ${0:#obsugał}"
+	  ],
+	  "description": "Składnia except obsługującego wiele typów błędów"
+	  //Operacje na plikach
+	},
+	"Otwieranie/pliku/do/odczytu": {
+	  "prefix": "withopen",
+	  "body": [
+		"with open (${1:#'nazwa_pliku.txt','r'}) as f:",
+		"    ${0:#Todo dane = f.read()}"
+	  ],
+	  "description": "Otwieranie pliku do odczytu"
+	},
+	"Otwieranie/pliku/do/zapisu": {
+	  "prefix": "withopenw",
+	  "body": [
+		"with open (${1:#'nazwa_pliku.txt','w'}) as f:",
+		"   ${0:#Todo f.write('tekst')}"
+	  ],
+	  "description": "Otwieranie pliku do zapisu(nadpisuje)"
+	},
+	"Otwieranie/pliku/do/dopisania": {
+	  "prefix": "withopena",
+	  "body": [
+		"with open (${1:#'nazwa_pliku.txt','a'}) as f:",
+		"${0:#Todo  f.write('dopisany tekst')}"
+	  ],
+	  "description": "Otwieranie pliku do dopisania"
+	},
+	"Otczyt/linia/po/lina": {
+	  "prefix": "withopenfor",
+	  "body": [
+		"with open (${1:#'nazwa_pliku.txt','r'}) as f:",
+		"   ${1:#for linia in f:}",
+		"       ${0:#print (linia)}"
+	  ],
+	  "description": "Wzrór odczytu linia po lini"
+	},
+	"Sprawdzenie/czy/plik/istnieje": {
+	  "prefix": "sprawdzczyplikistnieje",
+	  "body": [
+		"import os",
+		"if os.path.exists(${1:#'nazwa_pliku.txt'}):",
+		"    ${0:#Coś zrób}"
+	  ],
+	  "description": "Składnia sprawdzenia czy plik istnieje"
+	},
+	"Usunięcie/pliku": {
+	  "prefix": "usunięciepliku",
+	  "body": [
+		"import os",
+		"os.remove(${1:#'nazwa_pliku.txt'})"
+	  ],
+	  "description": "Usunięcie pliku "
+	},
+	"lista": {
+	  "prefix": "list",
+	  "body": [
+		"#lista uporządkowana: list = [1,2,3]",
+		"# dodanie elementu na koniec: list.append(4)",
+		"#usunięcie elementu: list.remove(2)",
+		"#usunięcie ostatniego elementu: list.pop() ",
+		"#sortowanie listy rosnąco: list.sort()",
+		"# odwrócenie kolejności elementów: list.reverse()",
+	  ],
+	  "description": "Opis"
+	},
+	"słownik": {
+	  "prefix": "dict",
+	  "body": [
+		"#Słownik nie uporządkowany kolekcja par: dict = {'klucz':'wartość'}",
+		"#dodanie nowej pary: dict['nowy'] = 'dodany' ",
+		"#Pobieranie wartości z klucza: dict = słownik.get('klucz')",
+		"#Usunięcie pary z kluczem: del dict['klucz']",
+	  ],
+	  "description": "Opis"
+	},
+	"Zbiór": {
+	  "prefix": "zbiór",
+	  "body": [
+		"#zbiór to nieuporządkowana kolekcja unikalnych elmentów: zbiór = {1,2,3}",
+		"#dodanie elementu: zbiór.add(4)",
+		"#Usunięcie elementu: zbiór.remove(2)",
+		"#Dodanie wielu elementów naraz: zbiór.update({5,6})",
+	  ],
+	  "description": "Zbiór i operacje na zbiorach"
+	},
+	"Krotka/tuple": {
+	  "prefix": "krotkatuple",
+	  "body": [
+		"#krotka = (1,2,3)",
+		"#wartość = krotka[0]"
+	  ],
+	  "description": "Krotka inaczej zwana tuple"
+	},
+	"List/comprehension": {
+	  "prefix": "listcomprehension",
+	  "body": [
+		"Skrótowa forma tworzenia listy na podstawie innej listy często z warunkiem",
+		"nowa_lista = [${1:#np. x for x in lista if x >0}]",
+	  ],
+	  "description": "List comprehension"
+	},
+	"Iteracja/po/słowniku": {
+	  "prefix": "iteracjaposłowniku",
+	  "body": [
+		"for klucz,wartość in słownik.items()",
+		"   ${0:#print(klucz,wartość)}"
+	  ],
+	  "description": "Iteracja po słowniku"
+	},
+	//Importy 
+	//Import całego modułu
+ "ImportModułu": {
+   "prefix": "Import",
+   "body": [
+	 "import nazwa_modułu",
+	 
+   ],
+   "description": "Import całego modułu"
+ },
+ //Import z aliasem
+"Import/Z/aliasem": {
+  "prefix": "importzaliasem",
+  "body": [
+	"import nazwa_modułu as alias",
+  ],
+  "description": "Import z aliasem"
+},
+//Import konkretnej funkcji/klasy
+"import/konkretnej/funkcji/klasy": {
+  "prefix": "importkonkretnejfunkcjiklasy",
+  "body": [
+	"from nazwa_modułu import funkcja",
+  ],
+  "description": "wielu importów konkretnej funkcji/klasy"
+},
+//Import z aliasem konkretnego elementu
+"Import/z/aliasem/konkretnego/elementu": {
+  "prefix": "importzaliasemkonkretnegoelementu",
+  "body": [
+	"from nazwa_modułu import funkcja as alias",
+  ],
+  "description": " wzór importów z aliasem konktetnego elementu"
+},
+//Import wielu elementów
+"Import/wielu/elementów": {
+  "prefix": "importwieluelementów",
+  "body": [
+	"from nazwa_modułu import funkcja1,funkcja2, Klasa",
+  ],
+  "description": "Wzrór importu wielu elementów"
+},
+//Import wszystkiego 
+"Import/wszystkiego": {
+  "prefix": "importwszystkiego",
+  "body": [
+	"form nazwa_modułu import *"
+  ],
+  "description": "Niezalecany import wszystkiego"
+},
+//dekoratory
+//@decorator do nakładania dodatkowej logiki na funkcję np.logowanie
+"@decorator": {
+  "prefix": "@decorator",
+  "body": [
+	"@decorator",
+	"def funkcja():",
+	"   #ciało funkcji"
+  ],
+  "description": "dekorator do nakładania dodatkowej logiki"
+},
+//Dekorator z parametrem np @retry
+"@decorator(argument)": {
+  "prefix": "@decorator(argument)",
+  "body": [
+	"@decorator(${1:argument})",
+	"def funkcja():",
+	"   ${0:#ciało funkcji}"
+  ],
+  "description": "dekorator z parametrem"
+},
+//Metoda niezależna od instacji klasy-nie używa self
+"@staticmethod": {
+  "prefix": "@staticmethod",
+  "body": [
+	"class Klasa:",
+	"   @staticmethod",
+	"   def funkcja():",
+	"       # ciało funkcji"
+  ],
+  "description": "Metoda niezależna od instacji klasy-nie używa self"
+},
+//Metoda działająca na klasie, nie na obiekcie — używa cls zamiast self.
+"@classmethod": {
+  "prefix": "@classmethod",
+  "body": [
+	"class Klasa:",
+	"   @classmethod",
+	"   def funkcja():",
+	"       # ciało funkcji"
+  ],
+  "description": "Metoda działająca na klasie, nie na obiekcie — używa cls zamiast self."
+},
+//Tworzysz własny „filtr” na funkcję — np. dodajesz logikę, walidację, cache.
+"Własny/dekorator": {
+  "prefix": "własnydekorator",
+  "body": [
+	"def dekorator(${1:funkcja}):",
+	   "def wrapper(*args,**kwargs):",
+	"    ${2:#coś przed}",
+	"    wynik = funkcja(${3:#*args,**kwargs})",
+	"    ${4:#coś po}",
+	"     return wynik",
+	"return wrapper"
+  ],
+  "description": "Tworzysz własny „filtr” na funkcję — np. dodajesz logikę, walidację, cache."
+},
+//Obsługa API i HTTP
+"PobieranieDanychzAPI": {
+  "prefix": "pobieraniedanychzapi",
+  "body": [
+	"import requests",
+	"response = requests.get('https://example.com)",
+	"data = response.json()"
+  ],
+  "description": "Pobieranie danych z API"
+},
+"Wysyłaniedanychdoapi": {
+  "prefix": "wysyłkadanychdoAPI",
+  "body": [
+	"import requests",
+
+	"playload = {'key':'value'}",
+	"response = requests.post('https://example.com/api', json=payload)"
+  ],
+  "description": "Wysłanie zapytania Post z danymi w formacie Json do API"
+},
+"AsnychronicznePobranieDanych": {
+  "prefix": "AsynchronicznePobranieDanych",
+  "body": [
+	"import httpx",
+	"import asyncio",
+	"async def fetch():",
+	"   async with httpx.AsyncClient() as clinet:",
+	"       response = await clinet.get('https://example.com')",
+	"       data = response.json()",
+  ],
+  "description": "Umożliwia pobieranie danych w sposób asynchroniczny-przydatne w fast api"
+	//AI-ML
+"NumPy operacje na macierzach": {
+  "prefix": "Podstawowy_typ_danych_w_ML_do_matmy",
+  "body": [
+	"import numpy as np",
+	"macierz = np.array([[1,2],[3,4]])"
+  ],
+  "description": "Tworzy dwumywiarową macierz(array),podstawowy typ danych w ML do obliczeń matmatycznych"
+},
+"Pandas manipulacja danymi": {
+  "prefix": "Wczytywanie_danych_z_pliku_CSV_i_modifikowanie_kolumny",
+  "body": [
+	"import pandas as pd",
+	"df = pd.read_csv('plik.csv')",
+	"df['kolumna'] = df['kolumna'].apply(lambda x: x *2)"
+  ],
+  "description": "Wczytuje dane z pliku CSV i modyfikuje kolumnę — Pandas to must-have do pracy z danymi tabelarycznymi."
+},
+"Scikit-learn klasyczne ML": {
+  "prefix": "Tworzenie_modelu_regresji_logistycznej_trenowanie_i_przewidywanie_wyników_klasyczny_ML_workflow",
+  "body": [
+	"form sklearn.linear_model import LogisticRegresion",
+	"model = LogisticRegresion()",
+	"model.fit(X_train, y_train)",
+	"pred = model.predict(X_test)"
+  ],
+  "description": "Tworzy model regresji logistycznej, trenuje go na danych i przewiduje wyniki — klasyczny ML workflow."
+},
+"TensorFlow deep learning": {
+  "prefix": "definiuj_i_trenuj_sieć_neuronową_w_TensorFlow",
+  "body": [
+	"import tensorflow as tf",
+	"model = tf.keras.Sequential([])",
+	"model.compile(optimizer = 'adam',loss = 'mse')",
+	"model.fit(X,y epochs = 10)"
+  ],
+  "description": "Definiuje i trenuje sieć neuronową w TensorFlow — używane w projektach deep learningowych."
+},
+//CLI
+"Tworzenie interfejsu CLI z opcjami nazwa i debug": {
+  "prefix": "Interfejs_CLI_z_opcjami_debug_nazwa_automatycznehelp",
+  "body": [
+	//argparse – parser argumentów z linii poleceń
+	"import argparse",
+	"",
+    "parser = arparse.ArgumentyParser(description = 'Opis Programu')",
+    "parser.add_argument('--nazwa',type = str, help = 'podaj nazwę])",
+	"parser.add_argument('--debug',action = 'store_true', help = 'tryb debugowania')",
+	"args = parser.parse_args()",
+    "print(args.nazwa)",
+  ],
+  "description": "worzy interfejs CLI z opcjami --nazwa i --debug. Automatycznie generuje help."
+},
+{
+	"Średniej wielkości apka": {
+	  "prefix": "średniaapka",
+	  "body": [
+		"#===Importy===",
+		"import logging",
+		"#Konfiguracja logowania",
+		"logging.basicConfig(level=logging.INFO)",
+		"#Klasa 1",
+		"class User: ",
+		"     def __init__(self,${1:name}:",
+		"         self.${1:name} = ${1:name}",
+		"     def greet(self): ",
+		"         pass #tu dodaj powitanie użytkownika",
+		"#Klasa 2",
+		"class Product: ",
+		"    def __init__(self,${2:title},${3:price}):",
+		"       self.${2:title} = ${2:titile}",
+		"       self.${3:price} = ${3:price}}",
+		"    def apply_discount(self,${4:user},${5:products}):",
+		"       self.${4:user} = ${4:user}",
+		"       self.${5:products} = ${5:products}",
+		"    def calculate_total(self):",
+		"        pass #Tu oblicz sumę zamówienia",
+		"#Funkcja pomocnicza ",
+		" def run_app():",
+		"    pass # Tu uruchom aplikację",
+		" # Punkt wejścia",
+		" if __name__ == '__main__':",
+		"    run_app()"
+	  ],
+	  "description": "Szablon aplikacji średniej z 3 klasami paroma funkcjami"
+	},
+	"Prototyp v1": {
+	  "prefix": "prototypv1",
+	  "body": [
+		"=== CLI ===",
+		"import argparse",
+		"import streamlit as st",
+		"import yaml",
+	    "",
+       "parser = argparse.ArgumentParser(description = 'Generator prototypów')",
+       "parser.add_argument('--nazwa',required=True)",
+	   "parser.add_argument('--komponenty',nargs='+')",
+	   "args = parser.parse_args()",
+	   "=== Generowanie klasy ===",
+	   "def generuj_klasę(nazwa,atrybuty):",
+        "   linie = [f'class {nazwa}:']",
+		"   linie.append('    def __init__(self,'+','.join(atrybuty)+'):')",
+        "   for a in atrybuty:",
+		"      linie.append(f'     self.{a} ={a}')",     
+        "   return '\n'.join(linie)",
+		"# === UI(Streamlit) ===",
+		"st.title('Generator Prototypów')",
+        "nazwa = st.text_input('Nazwa aplikacji')",
+		"komponenty = st.multiselect('Wybierz komponenty',['UI','Backend','AI'])",
+        "if st.button('generuj'):",
+		"    st.code(generuj_klase(nazwa, komponenty), language = 'python')",
+		"# === Prasowaniem YAML ===",
+		"def wczytaj_konfiguracje(plik):",
+		"  with open(plik) as f:",
+		"      return yaml.safe_load(f)",
+		"# === AI Podpowiedzi ===",
+		"def podpowiedz_snippet(prompt):",
+		"# Tu wrzucam zapytanie do AI",
+		"# tu mam dostać kod jako string",
+		"pass # Placeholder",
+		"# === Punkt wejścia ===",
+		"if __name__ == '__main__':",
+        "   print(generuj_klase(args.nazwa, args.komponenty))",
+	  ],
+	  "description": "Optymalnie do robienia prototypów z podpięciem AI i streamlit i yaml"
+},
+{
+	"Protoyp jednego komponentu w react": {
+	  "prefix": "reactcomponent",
+	  "body": [
+		"import React, {useState} form 'react'",
+		"\n",
+        "const ClassGenerator = ()=>{",
+		"   const[className,setClassName] = useState('');",
+        "   const[attributes,setAttributes] = useState('');",
+		"   const[result,setResult] = useState('');",
+        "\n",
+		"   const handleGenerate = async () =>{",
+        "  //prototypowy request do backhandu/AI",
+		"   const response = await fetch('/api/generate',{",
+        "     method: 'POST',",
+        "     headers:{'Content-Type':'application/json'},",
+		"     body: JSON.stringify({className, attributes}),",
+        "    });",
+		"\n",
+        "   const data = await response.json();",
+		"   setResult(data.code || 'Brak odpowiedzi');",
+        "};",
+		"\n",
+        "return (",
+        "  <div style ={{ maxWidth: 600, margin:'0 auto', padding: 20}}>",
+		"     <h2>Generuj klasę Python</h2>",
+        "     <input",
+		"       type = 'text'",
+        "       placholder = 'Nazwa klasy'",
+		"       value = {className}",
+        "       onChange = {(e) => setClassName(e.target.value)}",
+		"       style = {{ width: '100%', marginBottom: 10 }}",
+        "      />",
+		"     <input",
+		"       type = 'text'",
+        "       placholder = 'Atrybuty (np.name,email)'",
+		"       value = {attributes}",
+        "       onChange = {(e) => setAttributes(e.target.value)}",
+		"       style = {{ width: '100%', marginBottom: 10 }}",
+        "      />",
+        "     <button onClick = {handleGenerate}>Generuj z AI</button>",
+        "\n",
+		"{result && (",
+        " <pre style = {{ marignTop: 20, background:'#f4f4f4', padding: 10}}>",
+		"   {result}",
+        " </pre>",
+		")}",
+      "</div>",
+	");",
+  "};",
+  "export default ClassGenerator",
+
+	  ],
+	  "description": "Szablon do protypowania w react"
+	},
+
+	
+	}
+},
+" Szablon AI ": {
+	  "prefix": "modelAIwzór",
+	  "body": [
+		"#===Importy===",
+		"import numpy as np",
+		"from sklearn.model_selection import train_test_split",
+		"from sklearn.linear_model import LogisticRegresion # Można podmienić na inny model",
+		"# Przygotowywanie danych",
+		"def load_data():",
+		" Tu załaduj dane lub wygeneruj przykładowe",
+		"    x = np.random.rand(100,5) # 100 próbek, 5 cech",
+		"    y = np.random.randint(0,2,size = 100)  # Klasy binarne",
+		"#===Budowa Modelu===",
+		"class AIModel:",
+		"   def __init__(self):",
+		"     self.model = LogisticRegresion()",
+		"   def train(self, X_train, y_train)",
+		"       self.model.fit(X_train, y_train)",
+		"def predict(self, X_test):",
+		"    return self.model.predict(X_test)",
+		"def evaluate(self,X_test,y_test):",
+		" score = self.model.score(X_test, y_test)",
+		" print(f'Acuracy: {score: .2f}')",
+		"#===Główna Logika ===",
+		"def main():",
+		"     X, y = load_data()",
+		"     X_train , X_test, y_train, y_test = train_test_split(X,y test_size = 0.2)",
+		"     model = AIModel()",
+		"     model.train(X_train, y_train)",
+		"     predictions = model.predict(X_test)",
+		"     model.evaluate(X_test, y_test)",
+		"",
+		"# ====Punkt WEJŚCIA ===",
+		"if __name__ =='main'",
+		"   main()",
+	  ],
+	  "description": "Model AI z użyciem sticky learn"
+	},
+{
+	"Dodaj IP do interfejsu": {
+	  "prefix": "adresip",
+	  "body": [
+		"/ip address add address=192.168.88.1/24 interface=ether1",
+	  ],
+	  "description": "Dodaje Adres Ip do interfejsu"
+	},
+	"Dodaj gateway": {
+	  "prefix": "gateway",
+	  "body": [
+		"/ip route add gateway=192.168.88.254",
+	  ],
+	  "description": "Ustawienie bramy domyślnej"
+	},
+	"DNS": {
+	  "prefix": "dns",
+	  "body": [
+		"# servers zewnętrzne serwery , allow .. pozwala klientom z sieci lan używań mirkitka jako lokalnego reslovera dns",
+		"/ip dns set servers=8.8.8.8,1.1.1.1 allow-remote-requests=yes",
+	  ],
+	  "description": "ustawianie dns z użyciem mikrotika jako lokalnego resolvera dns"
+	},
+	"Ustawienie podstawowego firewalla": {
+	  "prefix": "ustawianiefirewallapodstawowego",
+	  "body": [
+		"/ip firewall filter add chain=input connection-state=established,related action=accept",
+		"/ip firewall filter add chain=input connection-state=invalid action=drop",
+		"/ip firewall filter add chain=input in-interface=ether1 action=drop"
+	  ],
+	  "description": "Komendy do ustawiania podstawowego firewalla"
+	},
+	"Ustawienie DHCP SERVER": {
+	  "prefix": "DHCP SERVER",
+	  "body": [
+		"/ip pool add name=dhc_pool ranges=192.168.88.10-192.168.88.100",
+		"/ip pool dhcp-server add name=dhcp1 interface=ether2 address-pool disabled=no",
+		"/ip dhcp-server network add address=192.168.88.0/24 gateway=192.168.88.1 dns-server=8.8.8.8"
+	  ],
+	  "description": "Komendy do ogarnięcia dhcp"
+	},
+	"Dodanie użytkownika ": {
+	  "prefix": "dodanieUżytkownika",
+	  "body": [
+		"/user add name=roman password=superhaslo group=full",
+	  ],
+	  "description": "komenda do dodawania użytkownika"
+	},
+	"NAT": {
+	  "prefix": "NAT",
+	  "body": [
+		"/ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade",
+	  ],
+	  "description": "Ustawienie NAT dla dostępu do internetu"
+	},
+	"Backup konfiguarcji ": {
+	  "prefix": "backupconfig",
+	  "body": [
+		"/export file=konfiguarcja_backup",
+	  ],
+	  "description": "ustawienia backupu konfiguarcji"
+	},
+	"Diagnostyka": {
+	  "prefix": "diagnostyka",
+	  "body": [
+		"/tool ping 8.8.8.8",
+		"/tool traceroute 8.8.8.8"
+	  ],
+	  "description": "Diagnostyka komendy do tego"
+	},
+	"Wi-Fi konfiguracja punktu dostępowego": {
+	  "prefix": "wifikonfiguracjapunktudostępowego",
+	  "body": [
+		"interface wireless set wlan1 ssid='MojaSiecWiFi' mode=ap-bridge frequency=2412 band=2ghz-b/g/n disabled=no",
+		"interface wireless security-profiles set default authentication-types=wpa2-psk wpa2-pre-shared-key='SuperHaso123'",
+		"interface wireless set wln1 security-profile=default",
+	  ],
+	  "description": "ssid-nazwa sieci WiFi, mode=ap-bridge tryb punktu dostępowego frequency=2412 kanał wifi wpa-pre-shared-key hasło do sieci"
+	},
+	"VPN konfiguracja L2TP/IPsec": {
+	  "prefix": "Vpnkonfig",
+	  "body": [
+		"#To jest pula adresów VPN",
+		"/ip pool add name=vpn-pool ranges=192.168.10-192.168.99.50",
+		"#Profil VPN",
+		"/ppp profile add name=vpn-profile local-address=192.168.99.1 remote-address=vpn-pool use-encryption=yes dns-server=8.8.8.8",
+		"# Użytkownik VPN",
+		"/ppp secret add name=romanvpn password=haslo123 profile=vpn-profile service=l2tp",
+		"# Serwer L2TP z IPsec",
+		"/interface l2tp-server server set enabled=yes use-ipses=yes ipsec-secret=MojeIPsecHaslo default-profile=vpn-profile",
+		"#firewall",
+		"/ip firewall filter add chain=input protocol=udp dst-port=500,1701,4500 action=accept comment='VPN L2TP/IPsec'",
+	  ],
+	  "description": "Konfiguracja vpn"
+	},
+	"VLAN seperacja sieci": {
+	  "prefix": "VLansepsieci",
+	  "body": [
+		"# Dodanie VLAN",
+		"/interface vlan add name=vlan10 interface=ether2 vlan-id=10",
+		"/interface vlan add name=vlan20 interface=ether2 vlan-id=10",
+		"/interface vlan add name=vlan30 interface=ether2 vlan-id=10",
+		"# Adresacja IP",
+		"/ip address add address=192.168.10.1/24 interface=vlan10",
+		"/ip address add address=192.168.20.1/24 interface=vlan20",
+		"/ip address add address=192.168.30.1/24 interface=vlan30",
+		"# DHCP VLAN",
+		"/ip pool add name=pool_vlan10 ranges=192.168.10.10-192.168.10.100",
+		"/ip dhcp-server add name=dhcp_vlan10 interface=vlan10 address-pool=pool_vlan10",
+		"/ip dhcp-server network add address=192.168.10.0/24 gateway=192.168.10.1 dns-server=8.8.8.8",
+		"# NAT dla VLAN",
+		"/ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade comment='Internet dla VLANów'",
+		"# Segmentacja sieci + mikrofirewall",
+		"/ip firewall filter add chain=forward src-address=192.168.10.0/24 dst-address=192.168.20.0/24 action=drop",
+		" # Honeypot VLAN + logowanie prób",
+		"/system logging add topics=firewall action=memory",
+		"/ip firewall filter add chain=input src-address-list=honeypot action=log"
+	  ],
+	  "description": "Konfiguracje VLAN"
+	},
+	//Dodatkowe komendy tworzące warsty ochronne
+	"Ograniczenie dostępu do Winbox/SSH/API": {
+	  "prefix": "OgraniczeniedostępudoWiboxSshApi",
+	  "body": [
+		"OgraniczeniedostępudoWiboxSshApi",
+		"/ip service disable telnet",
+		"/ip service disable ftp",
+		"/ip service disable www",
+		"/ip service disable api",
+		"/ip service disable winbox address=192.168.88.0/24",
+		"/ip service disable telnet",
+	  ],
+	  "description": "Opis: wyłącz nie używane usługi, ogranicz dostęp do Winbox/SSH tylko z zaufanej podsieci"
+	},
+	"Firewall - blokowanie nie autoryzowanego dostępu": {
+	  "prefix": "Firewall",
+	  "body": [
+		"/ip firewall filter add chain=input connection-state=established, realted action=accept",
+		"/ip firewall filter add chain=input connection-state=invalid action=drop",
+		"/ip firewall filter add chain=input protocol=tcp dst-port=22,8291 src-address=!192.168.88.0/24 action=drop comment='Blokuj SSH/Winbox spoza LAN'"
+	  ],
+	  "description": "Blokowanie nieuatoryzowanego dostępu"
+	},
+	"Port knocking(ukryty dostęp)": {
+	  "prefix": "Ukrytydostęp",
+	  "body": [
+		"/ip firewall filter add chain=input protocol=tcp dst-port=1000 action=add-src-to-address-list address-list=knock1 timeout=1m",
+		"/ip firewall filter add chain=input protocol=tcp dst-port=2000 src-address-list-knock1 action=add-src-to-address-list address-list=knock2 timeout=1m",
+		"/ip firewall filter add chain=input protocol=tcp dst-port=22 action=add-src-to-address-list address-list=knock2 action=accept",
+	  ],
+	  "description": "Użytkownik musi 'zapukać' w porty 1000 i 2000 by uzyskac dostęp do SSH"
+	},
+	"Silne hasla i grupy użytkowników": {
+	  "prefix": "silnehaslaigrużytkowników",
+	  "body": [
+		"/user group add name=admin policy=local,telnet,ssh,winbox,reboot,read,write,password,sensitive,sniff,test,api,romon",
+		"/user add name=roman password=Z4b3zP@ssw0rd group=admin"
+	  ],
+	  "description": "Tworzenie grupy użytkowników i dodawanie silnych haseł"
+	},
+	"Logowanie i monitoring": {
+	  "prefix": "Logmoni",
+	  "body": [
+		"/system logging add topics=firewall action=memory",
+		"/system logging add topics=account action=memory",
+		"/tool sniffer set filter-interface=ether1 filter-ip-address=192.168.88.100",
+		"/tool sniffer start"
+	  ],
+	  "description": "Komendy do logowania i monitoringu"
+	},
+	  "IPsec z GRE lub SSTP dla zaawansowanych VPN": {
+		"prefix": "IPseczgrelubsstp",
+		"body": [
+		  "/interface gre add name=gre-tun remote-address=192.168.99.2 local-address=192.168.99.1",
+		  "/ip ipsec peer add address=192.168.99.2 secret=SuperIPsecKey",
+		  "/ip ipsec policy add src-address=192.168.88.0/24 dst-address=192.168.77.0/24 sa-dst-address=192.168.99.2 sa-src-address=192.168.99.1 tunnel=yes"
+		],
+		"description": "Ustawianie IPsec z gre lub SSTP dla zaawansowanych VPN"
+	  },
+	  "VLAN + ACL": {
+		"prefix": "prefix",
+		"body": [
+		  "/ip firewall filter add chain=forward src-address=192.168.10.0/24 dst-address=192.168.20.0/24 action=drop comment='Blokuj dostęp między VLAN10 a VLAN20'",
+		],
+		"description": "Opis: Twórz VLANY dla różnych segmentów, użyj firewall do kontroli ruchu między vlanami"
+	  },
+	  "Dynamiczne listy adresów IP": {
+		"prefix": "DynamiclistIP",
+		"body": [
+		  "/ip firewall filter add chain=input protocol=tcp dst-port=22 connection-state=new action=add-src-to-address-list address-list=ssh_blacklist timeout=1h",
+		  "linia2"
+		],
+		"description": "Automatyczne blokowanie po X próbach logowania"
+	  },
+	  "Integracje z zewnętrznym SIEM/IDS": {
+		"prefix": "IntegracjaZzewnętrznymSIEM/IDS",
+		"body": [
+		  "/system logging action add name=remote target=remote remote=192.168.99.99",
+		  "/system logging add topics=firewall action=remote"
+		],
+		"description": "MikroTik może wysłac logi do sysloga, w gns3 można postawić seciurity onion albo graylog i analizować ruch"
+	  },
+	  "IPsec + certyfikaty": {
+		"prefix": "IPsec+certyfikaty",
+		"body": [
+		  "certificate add name=myCA comon-name=myCA key-size-2048 days-valid=3650",
+		  "certificate sign myCA"
+		],
+		"description": "zamiast pre-shared key użyj certyfikatów X.509, mikortik obsługuje własny CA"
+	},
+	"MAC filtering + port isolation": {
+	  "prefix": "BlokujMACizolujbridge",
+	  "body": [
+		"# Blokuj MAC",
+		"/interface wireless access-list add mac-address=XX:XX:XX:XX:XX:XX interface=wlan1 authentication=yes forwarding=no",
+		"# Izoluj porty w bridge",
+		"/interface bridge port set [find interface=ether3] horizo=1"
+	  ],
+	  "description": "Blokuj MAC i izoluj w bridge"
+	},
+	"Zabezpieczanie wartwy aplikacji": {
+	  "prefix": "blokowanie domen",
+	  "body": [
+		"/ip dns static add name=facebook.com address=127.0.0.1",
+	  ],
+	  "description": "Zabezpieczenia apek przez blokowanie domen"
+	}
+},
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
