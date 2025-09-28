@@ -51,7 +51,6 @@ W przyszłości aplikacja może zostać rozszerzona o:
 - Generowanie testów jednostkowych
 - Obsługę innych języków programowania
 - Integrację z repozytorium GitHub
-- połączenie z lokalnymi snippetami
 
 
 ## Uruchomienie
