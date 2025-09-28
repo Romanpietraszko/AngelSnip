@@ -12,21 +12,15 @@ def generuj_klase(nazwa, atrybuty):
     return "\n".join(linie)
 
 # === Ładowanie snippetów z folderu ===
-def znajdz_snippet_w_folderze(folder, prefix):
-    if not os.path.isdir(folder):
-        st.error(f"❌ Folder '{folder}' nie istnieje.")
-        return None
-    for plik in os.listdir(folder):
-        if plik.endswith(".code-snippets"):
-            sciezka = os.path.join(folder, plik)
-            try:
-                with open(sciezka, encoding="utf-8") as f:
-                    snippety = json.load(f)
-                    for nazwa, dane in snippety.items():
-                        if dane.get("prefix") == prefix:
-                            return dane
-            except Exception as e:
-                st.error(f"Błąd w pliku '{plik}': {e}")
+def znajdz_snippet_w_pliku(plik, prefix):
+    try:
+        with open(plik, encoding="utf-8") as f:
+            snippety = json.load(f)
+            for dane in snippety.values():
+                if dane.get("prefix") == prefix:
+                    return dane
+    except Exception as e:
+        st.error(f"Błąd w pliku '{plik}': {e}")
     return None
 
 # === Lista dostępnych prefixów ===
