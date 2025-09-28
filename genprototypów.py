@@ -51,7 +51,7 @@ def wypisz_prefixy(folder):
 st.title("🧠 Generator Prototypów z Lokalnymi Snippetami")
 
 # Stała ścieżka do folderu snippetów
-folder_snippetow = r"C:\Users\Acer\Desktop\snipety"
+folder_snippetow ="python.code-snippets"
 
 # Lista prefixów
 prefixy = wypisz_prefixy(folder_snippetow)
