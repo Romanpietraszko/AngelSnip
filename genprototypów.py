@@ -29,7 +29,7 @@ def znajdz_snippet_w_folderze(folder, prefix):
 # === UI (Streamlit) ===
 st.title("🧠 Generator Prototypów z Lokalnymi Snippetami")
 
-folder_ui = st.text_input("📁 Folder z snippetami", value=snipety)
+folder_ui = st.text_input("📁 Folder z snippetami", value="snipety")
 prefix_ui = st.text_input("🔍 Prefix snippetu (np. 'todo', 'pętlafor')")
 
 if st.button("🔄 Załaduj snippet"):
