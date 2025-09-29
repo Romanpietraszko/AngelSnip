@@ -286,7 +286,7 @@
  "ImportModułu": {
    "prefix": "Import",
    "body": [
-	 "import nazwa_modułu", 
+	 "import nazwa_modułu" 
    ],
    "description": "Import całego modułu"
  },
