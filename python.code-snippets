@@ -840,7 +840,7 @@
 	"Zabezpieczanie wartwy aplikacji": {
 	  "prefix": "blokowanie domen",
 	  "body": [
-		"/ip dns static add name=facebook.com address=127.0.0.1",
+		"/ip dns static add name=facebook.com address=127.0.0.1"
 	  ],
 	  "description": "Zabezpieczenia apek przez blokowanie domen"
 	},
