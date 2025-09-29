@@ -482,7 +482,6 @@
   ],
   "description": "worzy interfejs CLI z opcjami --nazwa i --debug. Automatycznie generuje help."
 },
-{
 	"Średniej wielkości apka": {
 	  "prefix": "średniaapka",
 	  "body": [
@@ -555,7 +554,6 @@
 	  ],
 	  "description": "Optymalnie do robienia prototypów z podpięciem AI i streamlit i yaml"
 },
-{
 	"Protoyp jednego komponentu w react": {
 	  "prefix": "reactcomponent",
 	  "body": [
@@ -652,7 +650,6 @@
 	  ],
 	  "description": "Model AI z użyciem sticky learn"
 	},
-{
 	"Dodaj IP do interfejsu": {
 	  "prefix": "adresip",
 	  "body": [
@@ -879,7 +876,6 @@
 	  ],
 	  "description": "Zabezpieczenia apek przez blokowanie domen"
 	}
-},
 },
 
 
