@@ -314,7 +314,7 @@
 "Import/wielu/elementów": {
   "prefix": "importwieluelementów",
   "body": [
-	"from nazwa_modułu import funkcja1,funkcja2, Klasa",
+	"from nazwa_modułu import funkcja1,funkcja2, Klasa"
   ],
   "description": "Wzór importu wielu elementów"
 },
