@@ -545,6 +545,7 @@
     ],
      "description": "Podstawowy wzór skryptu"
    }
+ }
 },
 	"React": {
 	  "prefix": "reactcomponent",
