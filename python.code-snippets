@@ -677,7 +677,7 @@
 	"Backup konfiguarcji ": {
 	  "prefix": "backupconfig",
 	  "body": [
-		"/export file=konfiguarcja_backup",
+		"/export file=konfiguarcja_backup"
 	  ],
 	  "description": "ustawienia backupu konfiguarcji"
 	},
