@@ -300,14 +300,14 @@
 "import/konkretnej/funkcji/klasy": {
   "prefix": "importkonkretnejfunkcjiklasy",
   "body": [
-	"from nazwa_modułu import funkcja",
+	"from nazwa_modułu import funkcja"
   ],
   "description": "wielu importów konkretnej funkcji/klasy"
 },
 "Import/z/aliasem/konkretnego/elementu": {
   "prefix": "importzaliasemkonkretnegoelementu",
   "body": [
-	"from nazwa_modułu import funkcja as alias",
+	"from nazwa_modułu import funkcja as alias"
   ],
   "description": " wzór importów z aliasem konktetnego elementu"
 },
