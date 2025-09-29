@@ -235,7 +235,7 @@
 		"#usunięcie elementu: list.remove(2)",
 		"#usunięcie ostatniego elementu: list.pop() ",
 		"#sortowanie listy rosnąco: list.sort()",
-		"# odwrócenie kolejności elementów: list.reverse()",
+		"# odwrócenie kolejności elementów: list.reverse()"
 	  ],
 	  "description": "Opis"
 	},
