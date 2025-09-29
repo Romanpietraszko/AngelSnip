@@ -156,8 +156,7 @@
 	"raise/Reczne/Rzucenie/Wyjątku": {
 	  "prefix": "raise",
 	  "body": [
-		"raise Exception(${0:#treść komunikat błędu})",
-		
+		"raise Exception(${0:#treść komunikat błędu})"
 	  ],
 	  "description": "Reczne rzucenie wyjątku"
 	},
