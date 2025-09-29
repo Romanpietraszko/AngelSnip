@@ -620,6 +620,21 @@
 	  ],
 	  "description": "Model AI z użyciem sticky learn"
 	},
+   WzórSkryptu": {
+  "prefix": "wzórskryptu",
+  "body": [
+	"import os",
+	"import sys",
+	"#Funkcja główna",
+	"def main():",
+	"    #Tu wpisz logikę programu",
+	"    pass",
+	"# Punkt wejścia",
+	"if __name__=='__main__':",
+	"    main()"
+  ],
+  "description": "Podstawowy wzór skryptu"
+},
 	"Dodaj IP do interfejsu": {
 	  "prefix": "adresip",
 	  "body": [
