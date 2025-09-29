@@ -293,11 +293,10 @@
 "Import/Z/aliasem": {
   "prefix": "importzaliasem",
   "body": [
-	"import nazwa_modułu as alias",
+	"import nazwa_modułu as alias"
   ],
   "description": "Import z aliasem"
 },
-//Import konkretnej funkcji/klasy
 "import/konkretnej/funkcji/klasy": {
   "prefix": "importkonkretnejfunkcjiklasy",
   "body": [
