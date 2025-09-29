@@ -38,6 +38,37 @@ def wypisz_prefixy_z_pliku(plik):
     except Exception as e:
         st.error(f"❌ Nie można wczytać prefixów: {e}")
     return sorted(set(prefixy))
+# === Menu snippetów z kategoriami ===#
+def menu_snippetów_z_kategoriami(plik):
+    try:
+        with open(plik, encoding="utf-8") as f:
+            snippety = json.load(f)
+    except Exception as e:
+        st.error(f"❌ Nie udało się wczytać pliku: {e}")
+        return
+
+    if not isinstance(snippety, dict):
+        st.error("❌ Format pliku jest nieprawidłowy — oczekiwano obiektu z kategoriami.")
+        return
+
+    kategorie = list(snippety.keys())
+    wybrana_kategoria = st.selectbox("📂 Wybierz kategorię snippetów", kategorie)
+
+    if wybrana_kategoria:
+        snippety_kategorii = snippety.get(wybrana_kategoria, {})
+        if not isinstance(snippety_kategorii, dict):
+            st.warning("⚠️ Wybrana kategoria nie zawiera poprawnych snippetów.")
+            return
+
+        nazwy_snippetów = list(snippety_kategorii.keys())
+        wybrany_snippet = st.selectbox("🧩 Wybierz snippet", nazwy_snippetów)
+
+        if wybrany_snippet:
+            snippet = snippety_kategorii[wybrany_snippet]
+            st.markdown(f"### ✨ Snippet: `{snippet.get('prefix', wybrany_snippet)}`")
+            st.markdown(f"**Opis:** {snippet.get('description', 'Brak opisu')}")
+            st.code("\n".join(snippet.get("body", [])), language="python")
+
 
 # === UI (Streamlit) ===
 st.title("🧠 Generator Prototypów z Lokalnymi Snippetami")
