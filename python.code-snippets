@@ -525,7 +525,7 @@
 		"pass # Placeholder",
 		"# === Punkt wejścia ===",
 		"if __name__ == '__main__':",
-        "   print(generuj_klase(args.nazwa, args.komponenty))",
+        "   print(generuj_klase(args.nazwa, args.komponenty))"
 	  ],
 	  "description": "Optymalnie do robienia prototypów z podpięciem AI i streamlit i yaml"
 },
