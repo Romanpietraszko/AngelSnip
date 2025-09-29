@@ -1,4 +1,5 @@
 {
+"Python":{
 	 "Pętla/For": {                                                   
 		"prefix": "pętlafor",
 	 	"body": [
@@ -528,8 +529,24 @@
         "   print(generuj_klase(args.nazwa, args.komponenty))"
 	  ],
 	  "description": "Optymalnie do robienia prototypów z podpięciem AI i streamlit i yaml"
+ },
+     "WzórSkryptu": {
+    "prefix": "wzórskryptu",
+    "body": [
+	   "import os",
+	   "import sys",
+	   "#Funkcja główna",
+	   "def main():",
+	   "    #Tu wpisz logikę programu",
+	   "    pass",
+	   "# Punkt wejścia",
+	   "if __name__=='__main__':",
+	   "    main()"
+    ],
+     "description": "Podstawowy wzór skryptu"
+   }
 },
-	"Protoyp jednego komponentu w react": {
+	"React": {
 	  "prefix": "reactcomponent",
 	  "body": [
 		"import React, {useState} form 'react'",
@@ -582,7 +599,7 @@
 	  ],
 	  "description": "Szablon do protypowania w react"
 	},
-" Szablon AI ": {
+"  AI ": {
 	  "prefix": "modelAIwzór",
 	  "body": [
 		"#===Importy===",
@@ -620,21 +637,7 @@
 	  ],
 	  "description": "Model AI z użyciem sticky learn"
 	},
-   "WzórSkryptu": {
-    "prefix": "wzórskryptu",
-    "body": [
-	   "import os",
-	   "import sys",
-	   "#Funkcja główna",
-	   "def main():",
-	   "    #Tu wpisz logikę programu",
-	   "    pass",
-	   "# Punkt wejścia",
-	   "if __name__=='__main__':",
-	   "    main()"
-    ],
-     "description": "Podstawowy wzór skryptu"
-   },
+ "Mikrotik":{
 	"Dodaj IP do interfejsu": {
 	  "prefix": "adresip",
 	  "body": [
