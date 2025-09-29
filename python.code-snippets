@@ -176,7 +176,6 @@
 		"   ${0:#obsuga}"
 	  ],
 	  "description": "Składnia except obsługującego wiele typów błędów"
-	  //Operacje na plikach
 	},
 	"Otwieranie/pliku/do/odczytu": {
 	  "prefix": "withopen",
@@ -284,8 +283,6 @@
 	  ],
 	  "description": "Iteracja po słowniku"
 	},
-	//Importy 
-	//Import całego modułu
  "ImportModułu": {
    "prefix": "Import",
    "body": [
@@ -293,7 +290,6 @@
    ],
    "description": "Import całego modułu"
  },
- //Import z aliasem
 "Import/Z/aliasem": {
   "prefix": "importzaliasem",
   "body": [
@@ -309,7 +305,6 @@
   ],
   "description": "wielu importów konkretnej funkcji/klasy"
 },
-//Import z aliasem konkretnego elementu
 "Import/z/aliasem/konkretnego/elementu": {
   "prefix": "importzaliasemkonkretnegoelementu",
   "body": [
@@ -317,7 +312,6 @@
   ],
   "description": " wzór importów z aliasem konktetnego elementu"
 },
-//Import wielu elementów
 "Import/wielu/elementów": {
   "prefix": "importwieluelementów",
   "body": [
@@ -325,7 +319,6 @@
   ],
   "description": "Wzór importu wielu elementów"
 },
-//Import wszystkiego 
 "Import/wszystkiego": {
   "prefix": "importwszystkiego",
   "body": [
@@ -333,8 +326,6 @@
   ],
   "description": "Niezalecany import wszystkiego"
 },
-//dekoratory
-//@decorator do nakładania dodatkowej logiki na funkcję np.logowanie
 "@decorator": {
   "prefix": "@decorator",
   "body": [
@@ -344,7 +335,6 @@
   ],
   "description": "dekorator do nakładania dodatkowej logiki"
 },
-//Dekorator z parametrem np @retry
 "@decorator(argument)": {
   "prefix": "@decorator(argument)",
   "body": [
@@ -354,7 +344,6 @@
   ],
   "description": "dekorator z parametrem"
 },
-//Metoda niezależna od instacji klasy-nie używa self
 "@staticmethod": {
   "prefix": "@staticmethod",
   "body": [
@@ -365,7 +354,6 @@
   ],
   "description": "Metoda niezależna od instacji klasy-nie używa self"
 },
-//Metoda działająca na klasie, nie na obiekcie — używa cls zamiast self.
 "@classmethod": {
   "prefix": "@classmethod",
   "body": [
@@ -376,7 +364,6 @@
   ],
   "description": "Metoda działająca na klasie, nie na obiekcie — używa cls zamiast self."
 },
-//Tworzysz własny „filtr” na funkcję — np. dodajesz logikę, walidację, cache.
 "Własny/dekorator": {
   "prefix": "własnydekorator",
   "body": [
@@ -390,7 +377,6 @@
   ],
   "description": "Tworzysz własny „filtr” na funkcję — np. dodajesz logikę, walidację, cache."
 },
-//Obsługa API i HTTP
 "PobieranieDanychzAPI": {
   "prefix": "pobieraniedanychzapi",
   "body": [
@@ -421,7 +407,6 @@
 	"       data = response.json()",
   ],
   "description": "Umożliwia pobieranie danych w sposób asynchroniczny-przydatne w fast api"
-	//AI-ML
 "NumPy operacje na macierzach": {
   "prefix": "Podstawowy_typ_danych_w_ML_do_matmy",
   "body": [
@@ -459,7 +444,6 @@
   ],
   "description": "Definiuje i trenuje sieć neuronową w TensorFlow — używane w projektach deep learningowych."
 },
-//CLI
 "Tworzenie interfejsu CLI z opcjami nazwa i debug": {
   "prefix": "Interfejs_CLI_z_opcjami_debug_nazwa_automatycznehelp",
   "body": [
