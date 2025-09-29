@@ -25,7 +25,7 @@ def wczytaj_snippety_z_folderu(folder):
 
 # === UI ===
 st.title("AngelSnip😇")
-st.subheader("\__(--)__/ If you are in madness of frameworks and madness of dependece by AI, this Angel Snip will show you the light in dark underground \__(--)__/")
+st.subheader(" *** If you are in madness of frameworks and madness of dependece by AI, this Angel Snip will show you the light in dark underground *** ")
 
 folder_snippetów = "snippety"
 wszystkie_snippety = wczytaj_snippety_z_folderu(".")
