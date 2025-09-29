@@ -406,6 +406,7 @@
 	"       data = response.json()"
   ],
   "description": "Umożliwia pobieranie danych w sposób asynchroniczny-przydatne w fast api"
+},
 "NumPy operacje na macierzach": {
   "prefix": "Podstawowy_typ_danych_w_ML_do_matmy",
   "body": [
