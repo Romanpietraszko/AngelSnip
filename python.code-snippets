@@ -403,7 +403,7 @@
 	"async def fetch():",
 	"   async with httpx.AsyncClient() as clinet:",
 	"       response = await clinet.get('https://example.com')",
-	"       data = response.json()",
+	"       data = response.json()"
   ],
   "description": "Umożliwia pobieranie danych w sposób asynchroniczny-przydatne w fast api"
 "NumPy operacje na macierzach": {
