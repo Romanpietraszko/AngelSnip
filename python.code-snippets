@@ -578,8 +578,7 @@
       "</div>",
 	");",
   "};",
-  "export default ClassGenerator",
-
+  "export default ClassGenerator"
 	  ],
 	  "description": "Szablon do protypowania w react"
 	},
