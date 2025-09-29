@@ -296,8 +296,7 @@
  "ImportModułu": {
    "prefix": "Import",
    "body": [
-	 "import nazwa_modułu",
-	 
+	 "import nazwa_modułu", 
    ],
    "description": "Import całego modułu"
  },
@@ -608,10 +607,6 @@
 	  ],
 	  "description": "Szablon do protypowania w react"
 	},
-
-	
-	}
-},
 " Szablon AI ": {
 	  "prefix": "modelAIwzór",
 	  "body": [
@@ -875,7 +870,7 @@
 		"/ip dns static add name=facebook.com address=127.0.0.1",
 	  ],
 	  "description": "Zabezpieczenia apek przez blokowanie domen"
-	}
+	},
 },
 
 
