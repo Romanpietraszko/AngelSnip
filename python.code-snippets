@@ -105,7 +105,7 @@
 	"jedno/linikowy/warunek": {
 	  "prefix": "krótkiif",
 	  "body": [
-		"${1:warunek} if warunek else ${0:przeciwny warunek}",
+		"${1:warunek} if warunek else ${0:przeciwny warunek}"
 		
 	  ],
 	  "description": "jedno linijkowy if z else"
@@ -150,7 +150,7 @@
 		"except:",
 		"   ${2:# kod obsługa błędu}",
 		"finally:",
-		"   ${0:#Kod który zawsze się wykona}",
+		"   ${0:#Kod który zawsze się wykona}"
 	  ],
 	  "description": "Obsługa błędów z blokiem finaly który zawsze się wykona"
 	},
@@ -175,7 +175,7 @@
 		"try:",
 		"   ${1:#Todo kod}",
 		"except(TypeError,ValueError)as e:",
-		"   ${0:#obsugał}"
+		"   ${0:#obsuga}"
 	  ],
 	  "description": "Składnia except obsługującego wiele typów błędów"
 	  //Operacje na plikach
@@ -197,7 +197,7 @@
 	  "description": "Otwieranie pliku do zapisu(nadpisuje)"
 	},
 	"Otwieranie/pliku/do/dopisania": {
-	  "prefix": "withopena",
+	  "prefix": "withopen",
 	  "body": [
 		"with open (${1:#'nazwa_pliku.txt','a'}) as f:",
 		"${0:#Todo  f.write('dopisany tekst')}"
@@ -248,7 +248,7 @@
 		"#Słownik nie uporządkowany kolekcja par: dict = {'klucz':'wartość'}",
 		"#dodanie nowej pary: dict['nowy'] = 'dodany' ",
 		"#Pobieranie wartości z klucza: dict = słownik.get('klucz')",
-		"#Usunięcie pary z kluczem: del dict['klucz']",
+		"#Usunięcie pary z kluczem: del dict['klucz']"
 	  ],
 	  "description": "Opis"
 	},
@@ -258,7 +258,7 @@
 		"#zbiór to nieuporządkowana kolekcja unikalnych elmentów: zbiór = {1,2,3}",
 		"#dodanie elementu: zbiór.add(4)",
 		"#Usunięcie elementu: zbiór.remove(2)",
-		"#Dodanie wielu elementów naraz: zbiór.update({5,6})",
+		"#Dodanie wielu elementów naraz: zbiór.update({5,6})"
 	  ],
 	  "description": "Zbiór i operacje na zbiorach"
 	},
@@ -274,7 +274,7 @@
 	  "prefix": "listcomprehension",
 	  "body": [
 		"Skrótowa forma tworzenia listy na podstawie innej listy często z warunkiem",
-		"nowa_lista = [${1:#np. x for x in lista if x >0}]",
+		"nowa_lista = [${1:#np. x for x in lista if x >0}]"
 	  ],
 	  "description": "List comprehension"
 	},
@@ -325,7 +325,7 @@
   "body": [
 	"from nazwa_modułu import funkcja1,funkcja2, Klasa",
   ],
-  "description": "Wzrór importu wielu elementów"
+  "description": "Wzór importu wielu elementów"
 },
 //Import wszystkiego 
 "Import/wszystkiego": {
