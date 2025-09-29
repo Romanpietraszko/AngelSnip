@@ -163,7 +163,7 @@
 	"assert/szybka/Walidacja/Warunku": {
 	  "prefix": "assert",
 	  "body": [
-		"assert, ${1:#warunek()}",
+		"assert, ${1:#warunek()}"
 	  ],
 	  "description": "Szybka walidacja warunku"
 	},
