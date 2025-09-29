@@ -1,4 +1,5 @@
 {
+"Python":{
 	 "Pętla/For": {                                                   
 		"prefix": "pętlafor",
 	 	"body": [
@@ -544,4 +545,5 @@
     ],
      "description": "Podstawowy wzór skryptu"
 },
+}
 }
