@@ -130,7 +130,6 @@
 	"if a <= b "
   	],
   	"description": "Porównania logiczne xd"
-	//obsługa błędów i walidacji xdd
 	},
 	"try/except/Klasyczna/Obsługa/Błędów": {
   	"prefix": "try/except",
