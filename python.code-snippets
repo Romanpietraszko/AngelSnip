@@ -620,7 +620,7 @@
 	  ],
 	  "description": "Model AI z użyciem sticky learn"
 	},
-   WzórSkryptu": {
+   "WzórSkryptu": {
     "prefix": "wzórskryptu",
     "body": [
 	   "import os",
