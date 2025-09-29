@@ -1,5 +1,4 @@
 {
-"Mikrotik":{
 	"Dodaj IP do interfejsu": {
 	  "prefix": "adresip",
 	  "body": [
@@ -224,6 +223,6 @@
 	  ],
 	  "description": "Zabezpieczenia apek przez blokowanie domen"
 	}
-}
+
 
 }
