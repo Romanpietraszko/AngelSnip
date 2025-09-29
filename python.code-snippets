@@ -860,6 +860,6 @@
 		"/ip dns static add name=facebook.com address=127.0.0.1"
 	  ],
 	  "description": "Zabezpieczenia apek przez blokowanie domen"
-	}
+	},
  }
 
