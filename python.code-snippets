@@ -453,7 +453,7 @@
     "parser.add_argument('--nazwa',type = str, help = 'podaj nazwę])",
 	"parser.add_argument('--debug',action = 'store_true', help = 'tryb debugowania')",
 	"args = parser.parse_args()",
-    "print(args.nazwa)",
+    "print(args.nazwa)"
   ],
   "description": "worzy interfejs CLI z opcjami --nazwa i --debug. Automatycznie generuje help."
 },
