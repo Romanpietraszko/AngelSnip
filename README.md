@@ -1,6 +1,6 @@
-# Generator Prototypów z AI
+AngelSnip 😇
 Zobacz landing page - (https://possible-guests-785259.framer.app/)
-Aplikacja stworzona jako projekt rekrutacyjny — służy do szybkiego generowania klas Python na podstawie danych wejściowych. , użytkownik może wygenerować kod bez pisania boilerplate. Idealne narzędzie dla junior developerów, PM-ów i startupowców.
+Aplikacja stworzona do szybszego kodowania i projektowania oraz szybszego dawania komend do mikrotika.Idealne narzędzie dla junior developerów, PM-ów i startupowców oraz dla devopsów.
 
 
 ## Funkcje
