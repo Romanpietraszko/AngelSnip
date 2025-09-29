@@ -447,7 +447,6 @@
 "Tworzenie interfejsu CLI z opcjami nazwa i debug": {
   "prefix": "Interfejs_CLI_z_opcjami_debug_nazwa_automatycznehelp",
   "body": [
-	//argparse – parser argumentów z linii poleceń
 	"import argparse",
 	"",
     "parser = arparse.ArgumentyParser(description = 'Opis Programu')",
