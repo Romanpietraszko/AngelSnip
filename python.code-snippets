@@ -739,7 +739,6 @@
 	  ],
 	  "description": "Konfiguracje VLAN"
 	},
-	//Dodatkowe komendy tworzące warsty ochronne
 	"Ograniczenie dostępu do Winbox/SSH/API": {
 	  "prefix": "OgraniczeniedostępudoWiboxSshApi",
 	  "body": [
@@ -749,7 +748,7 @@
 		"/ip service disable www",
 		"/ip service disable api",
 		"/ip service disable winbox address=192.168.88.0/24",
-		"/ip service disable telnet",
+		"/ip service disable telnet"
 	  ],
 	  "description": "Opis: wyłącz nie używane usługi, ogranicz dostęp do Winbox/SSH tylko z zaufanej podsieci"
 	},
@@ -767,7 +766,7 @@
 	  "body": [
 		"/ip firewall filter add chain=input protocol=tcp dst-port=1000 action=add-src-to-address-list address-list=knock1 timeout=1m",
 		"/ip firewall filter add chain=input protocol=tcp dst-port=2000 src-address-list-knock1 action=add-src-to-address-list address-list=knock2 timeout=1m",
-		"/ip firewall filter add chain=input protocol=tcp dst-port=22 action=add-src-to-address-list address-list=knock2 action=accept",
+		"/ip firewall filter add chain=input protocol=tcp dst-port=22 action=add-src-to-address-list address-list=knock2 action=accept"
 	  ],
 	  "description": "Użytkownik musi 'zapukać' w porty 1000 i 2000 by uzyskac dostęp do SSH"
 	},
@@ -801,15 +800,14 @@
 	  "VLAN + ACL": {
 		"prefix": "prefix",
 		"body": [
-		  "/ip firewall filter add chain=forward src-address=192.168.10.0/24 dst-address=192.168.20.0/24 action=drop comment='Blokuj dostęp między VLAN10 a VLAN20'",
+		  "/ip firewall filter add chain=forward src-address=192.168.10.0/24 dst-address=192.168.20.0/24 action=drop comment='Blokuj dostęp między VLAN10 a VLAN20'"
 		],
 		"description": "Opis: Twórz VLANY dla różnych segmentów, użyj firewall do kontroli ruchu między vlanami"
 	  },
 	  "Dynamiczne listy adresów IP": {
 		"prefix": "DynamiclistIP",
 		"body": [
-		  "/ip firewall filter add chain=input protocol=tcp dst-port=22 connection-state=new action=add-src-to-address-list address-list=ssh_blacklist timeout=1h",
-		  "linia2"
+		  "/ip firewall filter add chain=input protocol=tcp dst-port=22 connection-state=new action=add-src-to-address-list address-list=ssh_blacklist timeout=1h"
 		],
 		"description": "Automatyczne blokowanie po X próbach logowania"
 	  },
