@@ -23,7 +23,7 @@
 			"self.${2:argument1} = ${2:argument1}",
 			 "self.${3:argument2} = ${3:argument2}",
 		 "def ${4:metoda}(self):",
-		 	"${0:#ciało metody}",
+		 	"${0:#ciało metody}"
 			 "return coś"
 
 	 ],
