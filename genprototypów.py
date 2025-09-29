@@ -27,7 +27,7 @@ def wczytaj_snippety_z_folderu(folder):
 st.title("🧠 Generator Prototypów z Lokalnymi Snippetami")
 
 folder_snippetów = "snippety"
-wszystkie_snippety = wczytaj_snippety_z_folderu(folder_snippetów)
+wszystkie_snippety = "." # Katalog główny 
 
 if wszystkie_snippety:
     kategorie = list(wszystkie_snippety.keys())
