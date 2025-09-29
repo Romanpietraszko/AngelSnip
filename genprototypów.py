@@ -24,7 +24,8 @@ def wczytaj_snippety_z_folderu(folder):
     return snippety
 
 # === UI ===
-st.title("🧠 Generator Prototypów z Lokalnymi Snippetami")
+st.title("AngelSnip😇")
+st.subheader("\__(--)__/ If you are in madness of frameworks and madness of dependece by AI, this Angel Snip will show you the light in dark underground \__(--)__/")
 
 folder_snippetów = "snippety"
 wszystkie_snippety = wczytaj_snippety_z_folderu(".")
