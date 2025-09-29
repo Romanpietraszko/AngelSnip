@@ -127,7 +127,7 @@
 	"if a > b",
 	"if a < b ",
 	"if a >= b",
-	"if a <= b ",
+	"if a <= b "
   	],
   	"description": "Porównania logiczne xd"
 	//obsługa błędów i walidacji xdd
