@@ -710,7 +710,7 @@
 		"# Serwer L2TP z IPsec",
 		"/interface l2tp-server server set enabled=yes use-ipses=yes ipsec-secret=MojeIPsecHaslo default-profile=vpn-profile",
 		"#firewall",
-		"/ip firewall filter add chain=input protocol=udp dst-port=500,1701,4500 action=accept comment='VPN L2TP/IPsec'",
+		"/ip firewall filter add chain=input protocol=udp dst-port=500,1701,4500 action=accept comment='VPN L2TP/IPsec'"
 	  ],
 	  "description": "Konfiguracja vpn"
 	},
