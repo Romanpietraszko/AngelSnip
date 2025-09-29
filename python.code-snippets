@@ -1,8 +1,3 @@
-//args argumenty	
-//Najważniejsze składniki snipetu-> body ciało czyli co robi, desription opis, prefix nazwa
-//${1:nazwa}Placeholder z domyślną wartością – możesz ją zmienić, ale daje Ci punkt startowy
-//$1, $2, $3 Tab stop – miejsce, do którego przeskakuje kursor po wstawieniu snippetu
-//$0	Ostateczna pozycja kursora – gdzie trafisz na końcu edycji snippetu
 {
 	 "Pętla/For": {                                                   
 		"prefix": "pętlafor",
