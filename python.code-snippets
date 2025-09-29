@@ -616,7 +616,7 @@
 		"",
 		"# ====Punkt WEJŚCIA ===",
 		"if __name__ =='main'",
-		"   main()",
+		"   main()"
 	  ],
 	  "description": "Model AI z użyciem sticky learn"
 	},
