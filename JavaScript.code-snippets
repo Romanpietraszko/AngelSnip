@@ -1,0 +1,156 @@
+{
+
+"Deklaracja zmiennych": {
+	  "prefix": "deklaracjazmiennychjs",
+	  "body": [
+		"let liczba = 42; // liczba całkowita",
+		"const tekst = 'hello'; // stała tekstowa",
+		"var logiczna = true; //wartość logiczna"
+	  ],
+	  "description": "Deklaracja/typy zmiennych"
+	},
+	"Typy danych": {
+	  "prefix": "let",
+	  "body": [
+		"let nic = null; // brak wartości",
+		"let nieokreślone; // undefined",
+		"let tablica = [1,2,3]; //tablica",
+		"let obiket = {a:1,b:2}; // obiekt"
+	  ],
+	  "description": "różne typy danych"
+	},
+	"Operatory": {
+	  "prefix": "jsoperatory",
+	  "body": [
+		"// Arytmetyczne //",
+		"let suma = 5 + 3;",
+		"let iloczyn = 4 *2",
+		"// Porównania //",
+		"let czyRowne = (5 === '5'); //false różne typy",
+		"let czyWieksze = (10 > 5); //true",
+		"// Logiczne //",
+		"let wynik = true && false; //false",
+		"let odwrotność = !true //false"
+	  ],
+	  "description": "lista operatorów js"
+	},
+	"Instrukcje warunkowe": {
+	  "prefix": "if/else/switch",
+	  "body": [
+		"if (liczba >10) {",
+		"   console.log('Duża liczba');",
+		"} else {",
+		"  console.log('mała liczba');",
+		"}",
+		"switch (liczba) {",
+		"   case 1:",
+		"    console.log('jeden');",
+		"    break;",
+		"   case 2",
+		"    console.log('dwa');",
+		"      break;",
+		"    default;",
+		"      console.log('inne')",
+		"}",
+		
+		
+	  ],
+	  "description": "składnia instrukcji warunkowe js"
+	},
+	"Pętle Js": {
+	  "prefix": "for/while/do while",
+	  "body": [
+		"// for",
+		"for (let i=0; i<5; i++){",
+		" console.log(i);",
+		"}",
+        "// While",
+		"let j = 0",
+        "while (j <3) {",
+		"console.log(j);",
+		"j++;",
+		"}",
+		"// Do While",
+		"let j = 0",
+        "do {",
+		"console.log(j);",
+		"j++;",
+		"} while (j < 2);"
+	  ],
+	  "description": "Składnia pętli js"
+	},
+	"Funkcje": {
+	  "prefix": "funkcja tradycyjna i strzałkowa",
+	  "body": [
+		"// Funkcja tradycyjna",
+		"function dodaj(a, b) {",
+		"return a + b;",
+		"}",
+		"// Funkcja strzałkowa",
+		"const mnoz = (a,b)=> a * b;"
+
+	  ],
+	  "description": "Skłądnia funkcji"
+	},
+	"Tablice i obiekty": {
+	  "prefix": "tabliceIobiekty",
+	  "body": [
+		"// Tablica",
+		"let owoce = ['jabłko','banan'];",
+		"owoce.push('gruszka');",
+		"owoce.pop(); //usuń ostatni",
+		"// Obiekt",
+		"let osoba ={",
+		"imie:'Roman'",
+		"wiek:24,",
+		"przedstawSie: function() {",
+		"  console.log('Cześć, jestem '+ this.imie);",
+	   " }",
+	"  };"
+	  ],
+	  "description": "Składnia tablic i obiektów"
+	},
+	"Asynchroniczność": {
+	  "prefix": "asynchronicznośćzfetchjs",
+	  "body": [
+		"// Funkcja asynchroniczna z fetch",
+		"async function pobierzDane() {",
+		"  const res = await fetch('https://api.example.com');",
+		"  const dane = await res.json();",
+		"  console.log(dane);",
+		"}",
+
+	  ],
+	  "description": "Składnia asynchroniczności z fetchem"
+	},
+	"Klasy": {
+	  "prefix": "KlasyJS",
+	  "body": [
+		"class Zwierze {",
+          "constructor(imie) {",
+   "         this.imie = imie;",
+ "         }" ,
+
+  "        dzwiek() {",
+    "        console.log('Miau');",
+  "         }",
+"         }",
+
+"         const kot = new Zwierze('Mruczek');",
+"           kot.dzwiek(); // Miau"
+
+	  ],
+	  "description": "Składnia klasy JS"
+	},
+	"Obsługa błędów": {
+	  "prefix": "obsługabłędów",
+	  "body": [
+		"try{",
+		"  throw new Error('Coś poszło nie tak');",
+		"    } catch (e){",
+		"      console.error(e.messege);",
+		"   }"
+	  ],
+	  "description": "składnia obsługi błędów"
+	} 
+}
