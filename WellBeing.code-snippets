@@ -1,0 +1,24 @@
+{
+	"Pętla doceniająca": {
+	  "prefix": "Pętladoceniająca",
+	  "body": [
+		"# Wersja pierwsza",
+		"for good in range (10):",
+		"  print('You are the best')",
+		"Wersja druga opcjonalnie",
+		"for me in range(100):",
+		"  print('You are good 😊')"
+	  ],
+	  "description": "Pętle doceniające ;)"
+	},
+	"If pocieszający": {
+	  "prefix": "Ifpocieszający",
+	  "body": [
+		"sad_feeling = True",
+		"if sad_feeling:",
+		"  print('With some time, it will be better 😄')"
+
+	  ],
+	  "description": "If czyli warunek na słabsze dni"
+	}
+}
