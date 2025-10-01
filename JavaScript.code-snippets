@@ -116,8 +116,7 @@
 		"  const res = await fetch('https://api.example.com');",
 		"  const dane = await res.json();",
 		"  console.log(dane);",
-		"}",
-
+		"}"
 	  ],
 	  "description": "Składnia asynchroniczności z fetchem"
 	},
@@ -136,7 +135,6 @@
 
 "         const kot = new Zwierze('Mruczek');",
 "           kot.dzwiek(); // Miau"
-
 	  ],
 	  "description": "Składnia klasy JS"
 	},
