@@ -51,9 +51,7 @@
 		"      break;",
 		"    default;",
 		"      console.log('inne')",
-		"}",
-		
-		
+		"}"
 	  ],
 	  "description": "składnia instrukcji warunkowe js"
 	},
