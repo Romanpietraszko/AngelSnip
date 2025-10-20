@@ -1,0 +1,72 @@
+{
+	"Obsłua diody": {
+	  "prefix": "Diody",
+	  "body": [
+		"// ObsługaLED.h",
+		"#ifndef ObsługaLED_h",
+		"#define ObsługaLED_h",
+		"\n",
+        "#inculde <ArduinoR4Wifi.h>",
+		"\n",
+		"\n",
+		"// Klasa ObsługaLED służy do zarządzania pojedynczą diodą LED",
+		"class ObsługaLED {",
+         " private:",
+		"    uint8_t pin;",
+		"  public:",
+		"// konstruktor: inicjalizuje obietkt LED i ustawia pin jako OUTPUT",
+        "    RomanLED(uint8_t ledPin);",
+		"// Włącza diodę LED(ustawia stan wysoki)",
+		"    void on();",
+		"// Wyłącza diodę LED(Ustawia stan niski)",
+         "   void off();",
+		"//Miganie diodą LED z podanym interwałem czasowym(w milisekundach)",
+		"    void blink(unsigned long interval);",
+		"};",
+         "#endif"
+	  ],
+	  "description": "Obsługa diody Led do pliku.h nagłówek"
+	},
+	"ObsługaLED.cpp": {
+	  "prefix": "ObsługaLED.cpp - implementacja",
+	  "body": [
+		"#include 'ObsługaLED.h' // Dołączenie nagłówka klasy",
+		"\n",
+		"// Konstruktor: zapisuje numer pinu i ustawia go jako wyjście",
+         "ObsługaLED::ObsługaLED(uint8_t ledPin) {",
+		"   pin = ledPin;",
+		"   pinMode(pin,OUTPUT);",
+		"}",
+         "// Metoda włączająca diodę LED",
+		"void ObsługaLED :: on() {",
+		"  digitalWrite(pin,High); //Ustawienie stanu wysokiego na pinie",
+		"}",
+         "// Metoda wyłączająca diodę LED",
+		"void ObsługaLED :: off(){",
+		"  digitalWrite(pin,HIGH); // Ustawienie stanu wysokiego na pinie",
+		"}",
+         "//Metoda migająca diodą LED z podanym interwałem",
+		"void ObsługaLED::blink(unsigned long interval){",
+		"digitalWrite(pin, HIGH);  Włączenie diody",
+		"delay(interval);  //Odczekanie określonego czasu",
+        "digitalWrite(pin,LOW); // Wyłączenie diody",
+		"delay();  // Odczekanie ponownie",
+		"}"
+	  ],
+	  "description": "ObsługiaLED - implementacja"
+	},
+	"ObsługaLED.ino": {
+	  "prefix": "ledprzykładowy.ino",
+	  "body": [
+		"#inculde 'ObsługaLED.h' // Dołączenie Bibloteki LED",
+		"ObsługaLED led(13); // Tworzymy obiekt LED na pinie 13",
+		"void setup() {",
+		"// Nie trzeba nic robić - konstruktor już ustawił pin jako Output",
+		"}",
+		"void loop(){",
+		"led.blink(500); // Miganie diodą co 500 ms",
+		"}"
+	  ],
+	  "description": "Przykład użycia w plik .ino"
+	}
+}
